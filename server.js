@@ -1,6 +1,6 @@
-let express = require('express')
-let fs = require('fs');
-let app = express();
+const express = require('express')
+const fs = require('fs');
+const app = express();
 app.set('view engine', 'ejs');
 
 function readFileToArr(filename){

@@ -1,0 +1,59 @@
+
+<html>
+    <head>
+        <title>code test</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="/styles.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
+    </head>
+    <body>
+     <header>
+        <h1>Search Results</h1>
+        <div class="backbtn">
+        <a href="/"<% %>><i class="fa fa-arrow-circle-o-left" style="font-size:42px; color:white"></i></a>
+        </div>
+    </header>
+  
+    <div class="container"> 
+        <div>       
+            <h1> Search result from Provider 1 list </h1>
+            <%if(flightProvide1result.length==0){%>
+                <p>No Flights Found for  <%= origin %> --> <%= dest %> </p>
+            <%}%>
+             <% for (var i =0;i<flightProvide1result.length;i++){%>
+
+             <p><%=origin%> --> <%=dest%>( <%=flightProvide1result[i].departTime%> --> <%=flightProvide1result[i].destTime%> ) - <%=flightProvide1result[i].price%>  </p>
+
+              <% } %>
+         </div>
+            <hr>
+        <div>       
+            <h2> Search result from Provider 2 list </h2>
+            <%if(flightProvide2result.length==0){%>
+                <p>No Flights Found for  <%= origin %> --> <%= dest %> </p>
+            <%}%>
+             <% for (var i =0;i<flightProvide2result.length;i++){%>
+
+             <p><%=origin%> --> <%=dest%>( <%=flightProvide2result[i].departTime%> --> <%=flightProvide2result[i].destTime%> ) - <%=flightProvide2result[i].price%>  </p>
+
+              <% } %>
+              
+         </div>
+            <hr>
+         <div>       
+            <h1> Search result from Provider 3 list </h1>
+            <%if(flightProvide3result.length==0){%>
+                <p>No Flights Found for  <%= origin %> --> <%= dest %> </p>
+            <%}%>
+             <% for (var i =0;i<flightProvide3result.length;i++){%>
+
+             <p><%=origin%> --> <%=dest%>( <%=flightProvide3result[i].departTime%> --> <%=flightProvide3result[i].destTime%> ) - <%=flightProvide3result[i].price%>  </p>
+
+              <% } %>
+         </div>                  
+    </div>
+    </body>
+</html>
+
